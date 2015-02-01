@@ -1,8 +1,14 @@
+var lessMiddleware = require('less-middleware');
+
 var express = require('express');
 var app = express();
 
+
 //set view engine to jade rendering
 app.set('view engine', 'jade');
+
+//compile less to css
+app.use(lessMiddleware(__dirname + '/public'));
 
 //server static assets from public
 app.use(express.static(__dirname + '/public'));
