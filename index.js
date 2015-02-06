@@ -1,4 +1,5 @@
 var lessMiddleware = require('less-middleware');
+var routes = require('./routes/index');
 
 var express = require('express');
 var app = express();
@@ -13,9 +14,8 @@ app.use(lessMiddleware(__dirname + '/public'));
 //server static assets from public
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function (req, res) {
-	res.render('site/home', {});
-});
+//add routes
+routes(app);
 
 var server = app.listen(3000, function () {
 
