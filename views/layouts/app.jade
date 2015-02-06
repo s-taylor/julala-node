@@ -16,6 +16,7 @@ html.no-js
 		// Place favicon.ico and apple-touch-icon.png in the root directory
 		link(rel='stylesheet', href='styles/normalize.css')
 		link(rel='stylesheet', href='styles/main.css')
+		link(rel='stylesheet', href='styles/app.css')
 		script(src='js/vendor/modernizr-2.6.2.min.js')
 	body
 		//if lt IE 7
@@ -25,7 +26,20 @@ html.no-js
 				| to improve your experience.
 		// Add your site or application content here
 
+		.nav: ul
+			li: a(href="/") Home
+			li: a(href="/about") About 
+			li: a(href="/") Japanese 
+			li: a(href="/") Music
+			li: a(href="/") Calendar
+			li: a(href="/") Contact
+
+		.heading Julala's Tuition
+
 		block content
+
+		.footer
+			p 93 Made Pty Ltd © 2009-15. All Rights Reserved. ABN 43 130 700 284 (ACN 130 700 284)
 
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
 		script.
