@@ -14,10 +14,12 @@ html.no-js
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		// Place favicon.ico and apple-touch-icon.png in the root directory
-		link(rel='stylesheet', href='styles/normalize.css')
-		link(rel='stylesheet', href='styles/main.css')
+		// Vendor stylesheets
+		link(rel='stylesheet', href='vendor/normalize.css')
+		link(rel='stylesheet', href='vendor/boilerplate.css')
+		// App stylesheets
 		link(rel='stylesheet', href='styles/app.css')
-		script(src='js/vendor/modernizr-2.6.2.min.js')
+		script(src='vendor/modernizr-2.6.2.min.js')
 	body
 		//if lt IE 7
 			p.browsehappy
@@ -43,9 +45,8 @@ html.no-js
 
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
 		script.
-			window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\\/script>')
-		script(src='js/plugins.js')
-		//script(src='js/main.js')
+			window.jQuery || document.write('<script src="vendor/jquery-1.10.2.min.js"><\\/script>')
+		script(src='vendor/boilerplate.js')
 
 		// Google Analytics: change UA-XXXXX-X to be your site's ID.
 		//script.
